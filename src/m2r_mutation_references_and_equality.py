@@ -7,8 +7,8 @@ This module demonstrates:
  5. Two equality operators:   is   ==
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rachel Wood.
+"""  # DONE 1
 
 import rosegraphics as rg
 
@@ -18,7 +18,7 @@ import rosegraphics as rg
 ########################################################################
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+# DONE 2
 #  Step a:  READ the   mutate_point   function below.
 #
 #  Step b:  Note that the code in main has 5 parts numbered 1, 2, ... 5.
@@ -61,6 +61,7 @@ def main():
 
     # The next line shows that the INSIDES of   point   has changed.
     print('After: ', point)  # Look at what gets printed!
+    # Shows the new Point(45, 33) after point.y was reassigmed
 
     # ------------------------------------------------------------------
     # 2. Mutates the object again, this time from within a function call
@@ -74,6 +75,7 @@ def main():
 
     # The next line shows that the INSIDES of   point   has changed.
     print('After: ', point)  # Look at what gets printed!
+    # Shows new Point(45, 77) via calling mutating
 
     # ------------------------------------------------------------------
     # 3. Assigns another variable to refer to the same rg.Point
@@ -90,6 +92,7 @@ def main():
     print('Before:', point, point2)
     point2.x = 100
     print('After: ', point, point2)  # Note that  point.x  ALSO changed
+    # Both points will be Point(100,77)
 
     # ------------------------------------------------------------------
     # 4. Re-assigns the   point   variable to refer to another rg.Point.
@@ -101,6 +104,7 @@ def main():
     print('Before:', point, point2)
     point = rg.Point(10, 6)
     print(point, point2)  # Prints the two DIFFERENT rg.Points
+    # Makes point a new point while point2 is the same Point(100,77)
 
     # ------------------------------------------------------------------
     # 5. Shows the difference betwee the   is   operator
@@ -123,6 +127,7 @@ def main():
     print('Before: point3 and point4 are:', point3, point4)
     print('T or F: point3 is point4?', point3 is point4)
     print('T or F: point3 == point4?', point3 == point4)
+    # Is F and T
 
     point3.fill_color = 'blue'
     print()
@@ -130,6 +135,7 @@ def main():
     print('Fillcolors are:', point3.fill_color, point4.fill_color)
     print('T or F: point3 is point4?', point3 is point4)
     print('T or F: point3 == point4?', point3 == point4)
+    # Is F and F
 
     print()
     print('Second, another Point (point5) is assigned')
@@ -145,13 +151,13 @@ def main():
     print('T or F: point3 is point5?', point3 is point5)
     print('T or F: point3 is point4?', point3 is point4)
     print('T or F: point4 is point5?', point4 is point5)
-
+    # T, F, F
     print()
     print('Now the == operator:')
     print('T or F: point3 == point5?', point3 == point5)
     print('T or F: point3 == point4?', point3 == point4)
     print('T or F: point4 == point5?', point4 == point5)
-
+    # T, F, F
     print()
     print('Finally, a tricky one that your instruction will explain:')
     x = 'hello'
@@ -159,18 +165,21 @@ def main():
     print()
     print('T or F: "hello" is "hello"?', x is y)
     print('T or F: "hello" == "hello"?', x == y)
+    # T, T
 
     x = 1 * x
     y = 1 * y
     print()
     print('T or F: (1 * "hello") is (1 * "hello"?', x is y)
     print('T or F: (1 * "hello") == (1 * "hello"?', x == y)
+    # T, T
 
     x = 2 * x
     y = 2 * y
     print()
     print('T or F: (2 * "hello") is (2 * "hello"?', x is y)
     print('T or F: (2 * "hello") == (2 * "hello"?', x == y)
+    # F, T
 
 
 # ----------------------------------------------------------------------
