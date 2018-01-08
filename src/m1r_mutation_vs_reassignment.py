@@ -4,8 +4,8 @@ This module demonstrates the distinction betweeen:
   -- RE-ASSIGNING the name BLAH to refer to a different object.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rachel Wood..
+"""  # DONE 1
 
 import rosegraphics as rg
 
@@ -17,12 +17,12 @@ import rosegraphics as rg
 
 def main():
     """ Runs several examples. """
-#     example1()
-#     example2()
+    example1()
+    example2()
 
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+# DONE 2
 #  Step a:  READ the code in  example1.
 #
 #  Step b:  PREDICT what  example1  will print when it runs.
@@ -58,10 +58,13 @@ def example1():
     print('Before:', point2)
     point2 = rg.Point(77, 200)
     print('After: ', point2)
+    # makes two points instead of one
+    # This makes a new point instead of changing the x variable, but the
+    # result is still a Point(77, 200)
 
 
 # ----------------------------------------------------------------------
-# TODO: 3.
+# DONE 3
 #  Step a:  READ the code in  example2.
 #           Pay close attention to the difference between the functions:
 #              mutate_point
@@ -101,7 +104,8 @@ def example2():
     print('Before:', point2)
     point2 = return_point(point2)
     print('After: ', point2)
-
+    # This makes a new point instead of changing the x variable, but the
+    # result is still a Point(77, 200) by calling functions
 
 def mutate_point(point):
     point.x = 77  # Mutates the  rg.Point  argument
